@@ -2,6 +2,8 @@ package ninuna.losttales;
 
 import net.fabricmc.api.ModInitializer;
 
+import ninuna.losttales.item.LostTalesItemGroups;
+import ninuna.losttales.item.LostTalesItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,6 +13,8 @@ public class LostTales implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("Hello Fabric world!");
+		LOGGER.info(MOD_ID + ": initialising mod");
+		LostTalesItemGroups.registerItemGroups();
+		LostTalesItems.registerItems();
 	}
 }

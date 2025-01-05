@@ -2,14 +2,14 @@
 	"schemaVersion": 1,
 	"id": "losttales",
 	"version": "${version}",
-	"name": "Lost Tales",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Ainulindale: Lost Tales",
+	"description": "Extending the Minecraft Middle-earth mod with new and revised content.",
 	"authors": [
 		"NiNuNa"
 	],
 	"contact": {
 		"homepage": "https://www.youtube.com/@ninvna",
-		"sources": "https://github.com/NiNuNa/Ainulindale_Lost_Tales_1-21-1"
+		"sources": "https://github.com/NiNuNa/ainulindale-lost-tales-fabric"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/losttales/icon.png",
@@ -32,7 +32,8 @@
 		"fabricloader": ">=0.16.9",
 		"minecraft": "~1.21.1",
 		"java": ">=21",
-		"fabric-api": "*"
+		"fabric-api": "*",
+		"me": "1.5.0-1.21.1-alpha"
 	},
 	"suggests": {
 		"another-mod": "*"
