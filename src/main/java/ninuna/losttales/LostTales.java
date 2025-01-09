@@ -14,6 +14,7 @@ public class LostTales implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		LOGGER.info(MOD_ID + ": initialising mod");
+
 		LostTalesItemGroups.registerItemGroups();
 		LostTalesItems.registerItems();
 	}

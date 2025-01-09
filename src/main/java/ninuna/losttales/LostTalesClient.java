@@ -6,6 +6,6 @@ public class LostTalesClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-
+        //Todo...
     }
 }
