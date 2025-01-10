@@ -1,5 +1,11 @@
 {
+  "_comment": "Item",
   "item.losttales.name": "name",
 
-  "itemgroup.losttales.combat" : "Lost Tales - Combat"
+  "_comment": "Item Groups",
+  "itemgroup.losttales.combat" : "Lost Tales - Combat",
+
+  "_comment": "Keybinds",
+  "key.category.losttales.losttales": "Ainulindale: Lost Tales",
+  "key.losttales.quest.journal": "Open Quest Journal"
 }
