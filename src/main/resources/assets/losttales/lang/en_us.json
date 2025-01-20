@@ -1,11 +1,24 @@
 {
   "_comment": "Item",
-  "item.losttales.name": "name",
+  "item.losttales.name": "Test Item",
 
   "_comment": "Item Groups",
   "itemgroup.losttales.combat" : "Lost Tales - Combat",
 
   "_comment": "Keybinds",
-  "key.category.losttales.losttales": "Ainulindale: Lost Tales",
-  "key.losttales.quest.journal": "Open Quest Journal"
+  "key.category.losttales.losttales": "Ainulindalë: Lost Tales",
+  "key.losttales.quest.journal": "Open Quest Journal",
+
+  "_comment": "User Interface",
+  "ui.losttales.quest.journal.title": "Quest Journal",
+
+  "_comment": "Quest - Main",
+  "quest.losttales.main.awakening.name": "Awakening",
+  "quest.losttales.main.awakening.objective.i.name": "TODO",
+  "quest.losttales.main.awakening.objective.i.lore": "TODO",
+  "quest.losttales.main.awakening.objective.ii.name": "TODO",
+  "quest.losttales.main.awakening.objective.ii.lore": "TODO",
+
+
+  "test": "Realms is a safe, simple way to enjoy an online Minecraft world with up to ten friends at a time. It supports loads of minigames and plenty of custom worlds! Only the owner of the realm needs to pay."
 }

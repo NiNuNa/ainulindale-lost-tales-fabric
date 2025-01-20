@@ -14,7 +14,7 @@ import java.util.UUID;
 
 public class LostTalesStateSaverAndLoader extends PersistentState {
     public HashMap<UUID, LostTalesPlayerData> players = new HashMap<>();
-    private static final Type<LostTalesStateSaverAndLoader> type = new Type<>(LostTalesStateSaverAndLoader::new, LostTalesStateSaverAndLoader::createFromNbt, null);
+    private static final PersistentState.Type<LostTalesStateSaverAndLoader> type = new PersistentState.Type<>(LostTalesStateSaverAndLoader::new, LostTalesStateSaverAndLoader::createFromNbt, null);
 
     public LostTalesStateSaverAndLoader() {
     }
@@ -25,27 +25,26 @@ public class LostTalesStateSaverAndLoader extends PersistentState {
         players.forEach((uuid, playerData) -> {
             NbtCompound playerNbt = new NbtCompound();
 
-            playerNbt.putIntArray(LostTalesPlayerData.KEY_ACTIVE_QUESTS, playerData.activeQuests);
-            playerNbt.putIntArray(LostTalesPlayerData.KEY_COMPLETED_QUESTS, playerData.completedQuests);
+            playerNbt.putIntArray(LostTalesPlayerData.NBT_KEY_ACTIVE_QUESTS, playerData.activeQuests);
+            playerNbt.putIntArray(LostTalesPlayerData.NBT_KEY_COMPLETED_QUESTS, playerData.completedQuests);
 
             playersNbt.put(uuid.toString(), playerNbt);
         });
-        nbt.put(LostTalesPlayerData.KEY_PLAYER_DATA, playersNbt);
+        nbt.put(LostTalesPlayerData.NBT_KEY_PLAYER_DATA, playersNbt);
         return nbt;
     }
 
     public static LostTalesStateSaverAndLoader createFromNbt(NbtCompound tag, RegistryWrapper.WrapperLookup registryLookup) {
         LostTalesStateSaverAndLoader state = new LostTalesStateSaverAndLoader();
-
-        NbtCompound playersNbt = tag.getCompound(LostTalesPlayerData.KEY_PLAYER_DATA);
+        NbtCompound playersNbt = tag.getCompound(LostTalesPlayerData.NBT_KEY_PLAYER_DATA);
         playersNbt.getKeys().forEach(key -> {
             LostTalesPlayerData playerData = new LostTalesPlayerData();
 
-            for (int activeQuests : playersNbt.getCompound(key).getIntArray(LostTalesPlayerData.KEY_ACTIVE_QUESTS)) {
+            for (int activeQuests : playersNbt.getCompound(key).getIntArray(LostTalesPlayerData.NBT_KEY_ACTIVE_QUESTS)) {
                 playerData.activeQuests.add(activeQuests);
             }
 
-            for (int completedQuests : playersNbt.getCompound(key).getIntArray(LostTalesPlayerData.KEY_COMPLETED_QUESTS)) {
+            for (int completedQuests : playersNbt.getCompound(key).getIntArray(LostTalesPlayerData.NBT_KEY_COMPLETED_QUESTS)) {
                 playerData.completedQuests.add(completedQuests);
             }
 

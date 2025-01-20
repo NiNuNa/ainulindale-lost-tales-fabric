@@ -3,7 +3,7 @@
 	"id": "losttales",
 	"version": "${version}",
 
-	"name": "Ainulindale: Lost Tales",
+	"name": "Ainulindalë: Lost Tales",
 	"description": "Extending the Minecraft Middle-earth mod with new and revised content.",
 	"authors": [
 		"NiNuNa"
@@ -36,6 +36,6 @@
 		"minecraft": "~1.21.1",
 		"java": ">=21",
 		"fabric-api": "*",
-		"me": "1.5.0-1.21.1-alpha"
+		"me": "1.5.1-1.21.1-alpha"
 	}
 }

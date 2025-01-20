@@ -39,7 +39,7 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	// Middle-Earth Mod
-	modImplementation "maven.modrinth:middle-earth:1.5.0-1.21.1-alpha"
+	modImplementation "maven.modrinth:middle-earth:1.5.1-1.21.1-alpha"
 }
 
 processResources {

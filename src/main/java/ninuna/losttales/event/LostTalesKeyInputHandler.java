@@ -14,9 +14,6 @@ public class LostTalesKeyInputHandler {
 
     public static KeyBinding questJournalKey;
 
-    public LostTalesKeyInputHandler() {
-    }
-
     public static void registerKeyBinds() {
         LostTales.LOGGER.info(LostTales.MOD_ID + ": registering keybinds");
 
