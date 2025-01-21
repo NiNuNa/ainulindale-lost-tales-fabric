@@ -2,6 +2,8 @@ package ninuna.losttales;
 
 import net.fabricmc.api.ModInitializer;
 
+import ninuna.losttales.block.LostTalesBlocks;
+import ninuna.losttales.block.entity.LostTalesBlockEntities;
 import ninuna.losttales.command.LostTalesCommands;
 import ninuna.losttales.item.LostTalesItemGroups;
 import ninuna.losttales.item.LostTalesItems;
@@ -21,5 +23,7 @@ public class LostTales implements ModInitializer {
 		LostTalesCommands.registerCommands();
 		LostTalesItemGroups.registerItemGroups();
 		LostTalesItems.registerItems();
+		LostTalesBlocks.registerBlocks();
+		//LostTalesBlockEntities.registerBlockEntities();
 	}
 }
