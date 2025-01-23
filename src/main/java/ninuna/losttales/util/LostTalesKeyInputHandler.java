@@ -1,4 +1,4 @@
-package ninuna.losttales.event;
+package ninuna.losttales.util;
 
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
@@ -14,8 +14,8 @@ public class LostTalesKeyInputHandler {
 
     public static KeyBinding questJournalKey;
 
-    public static void registerKeyBinds() {
-        LostTales.LOGGER.info(LostTales.MOD_ID + ": registering keybinds");
+    public static void initialize() {
+        LostTales.LOGGER.info(LostTales.MOD_ID + ": initializing keybinds");
 
         questJournalKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(KEY_QUEST_JOURNAL, InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_J, KEY_CATEGORY_LOSTTALES));
 

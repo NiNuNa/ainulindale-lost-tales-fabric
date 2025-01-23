@@ -7,15 +7,13 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import ninuna.losttales.LostTales;
-import ninuna.losttales.block.LostTalesBlocks;
+import ninuna.losttales.block.ELostTalesBlocks;
 
 public class LostTalesBlockEntities {
-    public static BlockEntityType<LostTalesBlockEntityPlushie> PLUSHIE;
+    public static final BlockEntityType<LostTalesBlockEntityPlushie> PLUSHIE = register("plushie", LostTalesBlockEntityPlushie::new, ELostTalesBlocks.PLUSHIE_BEAR.getBlock(), ELostTalesBlocks.PLUSHIE_FOX.getBlock());
 
-    public static void registerBlockEntities() {
-        LostTales.LOGGER.info(LostTales.MOD_ID + ": registering block entities");
-
-        PLUSHIE = register("counter", LostTalesBlockEntityPlushie::new, LostTalesBlocks.PLUSHIE);
+    public static void initialize() {
+        LostTales.LOGGER.info(LostTales.MOD_ID + ": initializing block entities");
     }
 
     private static <T extends BlockEntity> BlockEntityType<T> register(String name, BlockEntityType.BlockEntityFactory<? extends T> entityFactory, Block... blocks) {

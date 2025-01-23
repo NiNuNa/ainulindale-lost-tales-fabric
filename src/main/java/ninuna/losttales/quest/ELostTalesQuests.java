@@ -16,8 +16,8 @@ public enum ELostTalesQuests {
         this.quest = quest;
     }
 
-    public static void registerQuests() {
-        LostTales.LOGGER.info(LostTales.MOD_ID + ": registering quests");
+    public static void initialize() {
+        LostTales.LOGGER.info(LostTales.MOD_ID + ": initializing quests");
 
         for (ELostTalesQuests q : ELostTalesQuests.values()) {
             quests.put(q.getQuest().getQuestID(), q.getQuest());

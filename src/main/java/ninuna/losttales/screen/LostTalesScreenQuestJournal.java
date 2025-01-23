@@ -7,7 +7,7 @@ import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import ninuna.losttales.LostTales;
-import ninuna.losttales.event.LostTalesKeyInputHandler;
+import ninuna.losttales.util.LostTalesKeyInputHandler;
 import ninuna.losttales.screen.widget.LostTalesWidgetQuestJournalQuestInfo;
 import ninuna.losttales.screen.widget.LostTalesWidgetQuestJournalQuestList;
 

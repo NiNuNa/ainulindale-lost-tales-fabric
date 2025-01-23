@@ -2,12 +2,13 @@ package ninuna.losttales;
 
 import net.fabricmc.api.ModInitializer;
 
-import ninuna.losttales.block.LostTalesBlocks;
+import ninuna.losttales.block.ELostTalesBlocks;
 import ninuna.losttales.block.entity.LostTalesBlockEntities;
 import ninuna.losttales.command.LostTalesCommands;
-import ninuna.losttales.item.LostTalesItemGroups;
-import ninuna.losttales.item.LostTalesItems;
+import ninuna.losttales.item.group.ELostTalesItemGroups;
+import ninuna.losttales.item.ELostTalesItems;
 import ninuna.losttales.quest.ELostTalesQuests;
+import ninuna.losttales.sound.ELostTalesSoundEvents;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,13 +18,14 @@ public class LostTales implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info(MOD_ID + ": initialising mod");
+		LOGGER.info(MOD_ID + ": initializing mod");
 
-		ELostTalesQuests.registerQuests();
-		LostTalesCommands.registerCommands();
-		LostTalesItemGroups.registerItemGroups();
-		LostTalesItems.registerItems();
-		LostTalesBlocks.registerBlocks();
-		//LostTalesBlockEntities.registerBlockEntities();
+		ELostTalesItemGroups.initialize();
+		// ELostTalesQuests.initialize();
+		// LostTalesCommands.initialize();
+		ELostTalesItems.initialize();
+		ELostTalesBlocks.initialize();
+		LostTalesBlockEntities.initialize();
+		ELostTalesSoundEvents.initialize();
 	}
 }
